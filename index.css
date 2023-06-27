@@ -1,0 +1,59 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes booking {
+    from {
+        transform: translateZ(0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+
+.banner {
+    background-color: rgb(255, 255, 76);
+    padding: 8px 0;
+    width: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.banner-slide:hover {
+    animation-play-state: paused;
+}
+
+.banner-slide {
+    display: inline-block;
+    box-sizing: content-box;
+    animation: booking 240s linear infinite;
+    will-change: transform;
+}
+
+.banner-text {
+    display: flex;
+    text-decoration: none;
+}
+
+.banner-span {
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Tahoma, sans-serif;
+    margin-right: 20px;
+    color: rgb(30, 29, 21);
+}
